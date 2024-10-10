@@ -1,0 +1,9 @@
+DROP TABLE clientes CASCADE;
+
+
+DROP TABLE Vendas CASCADE;
+
+DROP TABLE Funcionarios CASCADE;
+DROP TABLE itensvendas CASCADE;
+
+DROP TABLE Produtos CASCADE
