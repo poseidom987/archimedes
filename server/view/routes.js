@@ -10,38 +10,38 @@ import {
 const router = express.Router();
 
 // Rotas para Cliente
-router.get("/clientes/getAll", getAllClientes);
-router.get("/clientes/get/:id", getCliente);
-router.post("/clientes/add", addCliente);
-router.put("/clientes/update/:id", updateCliente);
-router.delete("/clientes/delete/:id", deleteCliente);
+router.get("/clientes/", getAllClientes);
+router.get("/clientes/:id", getCliente);
+router.post("/clientes/", addCliente);
+router.put("/clientes/:id", updateCliente);
+router.delete("/clientes/:id", deleteCliente);
 
 // Rotas para Funcionario
-router.get("/funcionarios/getAll", getAllFuncionarios);
-router.get("/funcionarios/get/:id", getFuncionario);
-router.post("/funcionarios/add", addFuncionario);
-router.put("/funcionarios/update/:id", updateFuncionario);
-router.delete("/funcionarios/delete/:id", deleteFuncionario);
+router.get("/funcionarios/", getAllFuncionarios);
+router.get("/funcionarios/:id", getFuncionario);
+router.post("/funcionarios/", addFuncionario);
+router.put("/funcionarios/:id", updateFuncionario);
+router.delete("/funcionarios/:id", deleteFuncionario);
 
 // Rotas para Produto
-router.get("/produtos/getAll", getAllProdutos);
-router.get("/produtos/get/:id", getProduto);
-router.post("/produtos/add", addProduto);
-router.put("/produtos/update/:id", updateProduto);
-router.delete("/produtos/delete/:id", deleteProduto);
+router.get("/produtos/", getAllProdutos);
+router.get("/produtos/:id", getProduto);
+router.post("/produtos/", addProduto);
+router.put("/produtos/:id", updateProduto);
+router.delete("/produtos/:id", deleteProduto);
 
 // Rotas para Venda
-router.get("/vendas/getAll", getAllVendas);
-router.get("/vendas/get/:id", getVenda);
-router.post("/vendas/add", addVenda);
-router.put("/vendas/update/:id", updateVenda);
-router.delete("/vendas/delete/:id", deleteVenda);
+router.get("/vendas/", getAllVendas);
+router.get("/vendas/:id", getVenda);
+router.post("/vendas/", addVenda);
+router.put("/vendas/:id", updateVenda);
+router.delete("/vendas/:id", deleteVenda);
 
 // Rotas para ItensVenda
-router.get("/itensVenda/getAll", getAllItensVenda);
-router.get("/itensVenda/get/:id", getItensVenda);
-router.post("/itensVenda/add", addItensVenda);
-router.put("/itensVenda/update/:id", updateItensVenda);
-router.delete("/itensVenda/delete/:id", deleteItensVenda);
+router.get("/itensVenda/", getAllItensVenda);
+router.get("/itensVenda/:id", getItensVenda);
+router.post("/itensVenda/", addItensVenda);
+router.put("/itensVenda/:id", updateItensVenda);
+router.delete("/itensVenda/:id", deleteItensVenda);
 
 export default router;
