@@ -73,6 +73,18 @@ export const deleteCliente = async (req, res) => {
     }
 };
 
+export const getTotalClientes = async (req, res) => {
+    try {
+        const totalClientes = await ClienteModel.count(); // Conta o total de clientes
+        return res.status(200).json({ totalClientes });
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({ "error": "Internal server error." });
+    }
+};
+
+
+
 // --- Repetindo para outras tabelas ---
 export const getAllFuncionarios = async (req, res) => {
     try {
@@ -278,6 +290,16 @@ export const deleteVenda = async (req, res) => {
         }
         await venda.destroy();
         return res.status(200).json({ message: "Venda deleted successfully." });
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({ "error": "Internal server error." });
+    }
+};
+
+export const getTotalVendas = async (req, res) => {
+    try {
+        const totalVendas = await VendaModel.sum('total'); // 'valor_total' sendo a coluna de somatório
+        return res.status(200).json({ totalVendas });
     } catch (error) {
         console.log(error);
         return res.status(500).json({ "error": "Internal server error." });

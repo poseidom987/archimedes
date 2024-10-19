@@ -4,7 +4,7 @@ import {
     getAllFuncionarios, addFuncionario, updateFuncionario, deleteFuncionario, getFuncionario,
     getAllProdutos, addProduto, updateProduto, deleteProduto, getProduto,
     getAllVendas, addVenda, updateVenda, deleteVenda, getVenda,
-    getAllItensVenda, addItensVenda, updateItensVenda, deleteItensVenda, getItensVenda 
+    getAllItensVenda, addItensVenda, updateItensVenda, deleteItensVenda, getItensVenda, getTotalVendas, getTotalClientes
 } from "../controller/userController.js"; // Altere o caminho para onde você definiu os controladores
 
 const router = express.Router();
@@ -12,9 +12,11 @@ const router = express.Router();
 // Rotas para Cliente
 router.get("/clientes/", getAllClientes);
 router.get("/clientes/:id", getCliente);
+router.get("/clientesTotal/", getTotalClientes);
 router.post("/clientes/", addCliente);
 router.put("/clientes/:id", updateCliente);
 router.delete("/clientes/:id", deleteCliente);
+
 
 // Rotas para Funcionario
 router.get("/funcionarios/", getAllFuncionarios);
@@ -33,6 +35,7 @@ router.delete("/produtos/:id", deleteProduto);
 // Rotas para Venda
 router.get("/vendas/", getAllVendas);
 router.get("/vendas/:id", getVenda);
+router.get("/vendasTotal/", getTotalVendas);
 router.post("/vendas/", addVenda);
 router.put("/vendas/:id", updateVenda);
 router.delete("/vendas/:id", deleteVenda);
